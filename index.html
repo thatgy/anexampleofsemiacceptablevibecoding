@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bharat Shah | Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: #f5f7fb;
+      color: #222;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10%;
+      background: #111827;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    .hero {
+      height: 90vh;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    .hero button {
+      margin-top: 25px;
+      padding: 12px 28px;
+      border: none;
+      background: #38bdf8;
+      color: black;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 25px;
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      background: #0ea5e9;
+    }
+
+    .section {
+      padding: 80px 10%;
+    }
+
+    .section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .dark {
+      background: #0f172a;
+      color: white;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
+    }
+
+    .skills-grid span {
+      background: #38bdf8;
+      color: black;
+      padding: 12px;
+      text-align: center;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    }
+
+    .dark .card {
+      background: #1e293b;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111827;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .hero h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h1>Bharat Shah</h1>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <h2>Math & Computer Science Student</h2>
+    <p>Future Software Engineer • Machine Learning Enthusiast</p>
+    <button onclick="scrollToSection('contact')">Contact Me</button>
+  </header>
+
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+      I'm a Mathematics and Computer Science student at UIC with a minor in
+      Biomedical Engineering. I enjoy building software, solving problems,
+      and exploring machine learning and IT systems.
+    </p>
+  </section>
+
+  <section id="skills" class="section dark">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <span>Java</span>
+      <span>Python</span>
+      <span>JavaScript</span>
+      <span>HTML5</span>
+      <span>CSS</span>
+      <span>Machine Learning</span>
+      <span>Command Line</span>
+      <span>IT Support</span>
+      <span>Computer Science</span>
+    </div>
+  </section>
+
+  <section id="education" class="section">
+    <h2>Education</h2>
+
+    <div class="card">
+      <h3>University of Illinois Chicago</h3>
+      <p>B.S. Mathematics & Computer Science</p>
+      <p>Minor: Biomedical Engineering</p>
+      <p>2023 – Present</p>
+    </div>
+
+    <div class="card">
+      <h3>Downers Grove South High School</h3>
+      <p>High School Diploma</p>
+      <ul>
+        <li>National Merit Commended</li>
+        <li>Math Team</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="certifications" class="section dark">
+    <h2>Certifications</h2>
+    <div class="card">
+      <h3>CompTIA A+</h3>
+      <p>Valid: August 2023 – August 2026</p>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:bharatcshah6@gmail.com">bharatcshah6@gmail.com</a></p>
+    <p>Phone: +1 630-974-0125</p>
+    <p>Location: Woodridge, IL</p>
+  </section>
+
+  <footer>
+    <p>© 2026 Bharat Shah</p>
+  </footer>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+  </script>
+
+</body>
+</html>
